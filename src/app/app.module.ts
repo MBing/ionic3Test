@@ -8,6 +8,7 @@ import { AngularFireModule } from 'angularfire2';
 
 import { MyApp } from './app.component';
 import { FIREBASE_CONFIG } from './firebase.credentials';
+import { SampleListService } from '../services/sample-list/sample-list.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FIREBASE_CONFIG } from './firebase.credentials';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SampleListService
   ]
 })
 export class AppModule {}
