@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the AddSampleItemPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Item } from '../../models/item/item.model';
 
 @IonicPage()
 @Component({
@@ -14,6 +9,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'add-sample-item.html',
 })
 export class AddSampleItemPage {
+	item: Item = {
+		name: '',
+		quantity: null,
+		price: null
+	}
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
