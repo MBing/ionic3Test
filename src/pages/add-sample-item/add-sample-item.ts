@@ -30,7 +30,7 @@ export class AddSampleItemPage {
   addItem(item: Item) {
   	this.sample.addItem(item).then(ref => {
   		// console.log('test with ref.key');
-  		this.navCtrl.setRoot('Homepage', { key: ref.key })
+  		this.navCtrl.setRoot('HomePage', { key: ref.key })
   	})
   }
 }
