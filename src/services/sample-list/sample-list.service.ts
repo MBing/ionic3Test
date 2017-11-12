@@ -18,4 +18,8 @@ export class SampleListService {
 	addItem(item: Item) {
 		return this.sampleListRef.push(item);
 	}
+
+	editItem(item: Item) {
+	  return this.sampleListRef.update(item.key, item);
+  }
 }

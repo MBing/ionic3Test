@@ -9,6 +9,7 @@ import { AngularFireModule } from 'angularfire2';
 import { MyApp } from './app.component';
 import { FIREBASE_CONFIG } from './firebase.credentials';
 import { SampleListService } from '../services/sample-list/sample-list.service';
+import { ToastService } from "../services/toast/toast.service";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SampleListService } from '../services/sample-list/sample-list.service';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SampleListService
+    SampleListService,
+    ToastService
   ]
 })
 export class AppModule {}
