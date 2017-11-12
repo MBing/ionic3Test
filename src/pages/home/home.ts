@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
+import {Observable} from "rxjs/Observable";
 
-import { SampleListService } from '../services/sample-list/sample-list.service';
+import { SampleListService } from '../../services/sample-list/sample-list.service';
+import {Item} from "../../models/item/item.model";
 
 @IonicPage()
 @Component({
@@ -18,7 +20,7 @@ export class HomePage {
   		.snapshotChanges() // key and value
   		.map(changes => {
   			return changes.map(c => ({
-  				key: c.payload.key, 
+  				key: c.payload.key,
   				...c.payload.val()
   			}))
   		})
