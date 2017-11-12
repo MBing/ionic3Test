@@ -5,7 +5,7 @@ import { Item } from '../../models/item/item.model';
 
 @Injectable()
 export class SampleListService {
-	private sampleListRef = this.db.list<Item>('samplelist-mbing');
+	private sampleListRef = this.db.list<Item>('your-db-name');
 
 	constructor(private db: AngularFireDatabase) {
 
