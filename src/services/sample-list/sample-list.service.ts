@@ -22,4 +22,8 @@ export class SampleListService {
 	editItem(item: Item) {
 	  return this.sampleListRef.update(item.key, item);
   }
+
+  removeItem(item: Item) {
+    return this.sampleListRef.remove(item.key);
+  }
 }

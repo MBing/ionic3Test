@@ -32,4 +32,12 @@ export class EditSampleItemPage {
         this.navCtrl.setRoot('HomePage');
       })
   }
+
+  removeItem(item: Item) {
+    this.sample.removeItem(item)
+      .then(() => {
+        this.toast.show(`${item.name} removed!`);
+        this.navCtrl.setRoot('HomePage');
+      })
+  }
 }
